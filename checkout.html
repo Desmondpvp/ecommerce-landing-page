@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#008ecc" />
+    <meta name="description" content="Your shopping cart at MegaMart." />
+    <title>Checkout | MegaMart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/checkout.js" defer></script>
+  </head>
+  <body>
+    <div class="topline">
+      <p>Welcome to MegaMart!</p>
+      <div><a href="#footer">Deliver to Nigeria</a><span aria-hidden="true">|</span><a href="#footer">Track your order</a><span aria-hidden="true">|</span><a href="#footer">Need help?</a></div>
+    </div>
+
+    <header class="store-header">
+      <a class="brand" href="index.html" aria-label="MegaMart home"><span class="brand-symbol" aria-hidden="true">M</span><span>MegaMart</span></a>
+      <form class="search-form" role="search">
+        <label class="visually-hidden" for="site-search">Search products</label>
+        <input id="site-search" type="search" placeholder="Search essentials, smartphones and more..." />
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+      </form>
+      <div class="account-actions">
+        <a href="#footer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21a7 7 0 0 1 14 0"></path></svg><span>Sign in</span></a>
+        <button class="cart-button" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h2l2.1 11h9.8l2-8H7"></path><circle cx="10" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span>Cart</span><b class="cart-count" aria-live="polite">0</b></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="store-section" aria-labelledby="checkout-title">
+        <div class="section-title">
+          <h2 id="checkout-title">Your <span>Shopping Cart</span></h2>
+          <a href="index.html" class="continue-shopping">Continue shopping <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="cart-container" id="cart-container">
+          <!-- Cart items will be injected here by checkout.js -->
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₦0</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span id="cart-delivery">₦0</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cart-total">₦0</span>
+          </div>
+          <button class="checkout-btn" id="checkout-btn" disabled>Proceed to Checkout</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="store-footer" id="footer">
+      <div class="footer-main">
+        <div class="footer-about"><a class="brand footer-brand" href="index.html"><span class="brand-symbol" aria-hidden="true">M</span><span>MegaMart</span></a><p>Your everyday shopping destination. Great finds, fair prices, delivered with care.</p><div class="store-badges"><a href="#footer" aria-label="Download on the App Store"><span aria-hidden="true">●</span> App Store</a><a href="#footer" aria-label="Get it on Google Play"><span aria-hidden="true">▶</span> Google Play</a></div></div>
+        <div class="footer-column"><h2>Most Popular Categories</h2><a href="#smartphones">Smartphones</a><a href="#brands">Electronics</a><a href="#categories">Home &amp; Kitchen</a><a href="#essentials">Daily Essentials</a><a href="#categories">Accessories</a></div>
+        <div class="footer-column"><h2>Customer Services</h2><a href="#footer">About us</a><a href="#footer">Terms &amp; Conditions</a><a href="#footer">FAQ</a><a href="#footer">Privacy Policy</a><a href="#footer">Contact us</a></div>
+        <div class="footer-column"><h2>Need help?</h2><a href="mailto:hello@megamart.example">hello@megamart.example</a><a href="tel:+2348000000000">+234 800 000 0000</a><p>Monday to Saturday<br />9:00am – 6:00pm</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 MegaMart. All rights reserved.</span><span>Made for everyday living <b aria-hidden="true">♥</b></span></div>
+    </footer>
+
+    <p class="search-status visually-hidden" aria-live="polite"></p>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
